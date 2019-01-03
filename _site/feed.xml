@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-03T17:03:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Iron’s Home</title><subtitle>제길 미니멀 띰</subtitle><author><name>C.W. Kim</name></author><entry><title type="html">IhaveanIdea</title><link href="http://localhost:4000/iron/IhaveanIdea/" rel="alternate" type="text/html" title="IhaveanIdea" /><published>2019-01-02T00:00:00+09:00</published><updated>2019-01-02T00:00:00+09:00</updated><id>http://localhost:4000/iron/IhaveanIdea</id><content type="html" xml:base="http://localhost:4000/iron/IhaveanIdea/">&lt;h3 id=&quot;아이디어가-있어요&quot;&gt;아이디어가 있어요&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;계속 갱신하면서 올 한해 아이디어를 daily coding으로 옮겨보고자 함&lt;/p&gt;
+  &lt;h4 id=&quot;01-lineup&quot;&gt;#01. Lineup&lt;/h4&gt;
+  &lt;p&gt;총평 - 계속 해온 거지만, 제품화 하기엔 부족함&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;사야 감독이 되어 선수들의 라인업을 작성하고 공유하는 시스템
+      &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// swift sentence &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;      &lt;/div&gt;
+      &lt;p&gt;&lt;img src=&quot;https://ironhub.github.io/assets/LineupScreen.png&quot; alt=&quot;Lineup Screenshot #01&quot; /&gt;
+ 이곳에 내용을 쓰시오&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;02-업무-일지&quot;&gt;#02. 업무 일지&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;업무 일지를 기록하고 메일 / 메신저로 공유&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;03-관계-그래프&quot;&gt;#03. 관계 그래프&lt;/h4&gt;</content><author><name>C.W.Kim</name></author><category term="아이디어" /><summary type="html">아이디어가 있어요 계속 갱신하면서 올 한해 아이디어를 daily coding으로 옮겨보고자 함 #01. Lineup 총평 - 계속 해온 거지만, 제품화 하기엔 부족함 사야 감독이 되어 선수들의 라인업을 작성하고 공유하는 시스템 // swift sentence 이곳에 내용을 쓰시오</summary></entry><entry><title type="html">Oracle Blockchain Cloud Tutorial</title><link href="http://localhost:4000/iron/Oracle-Blockchain-Cloud-Tutorial/" rel="alternate" type="text/html" title="Oracle Blockchain Cloud Tutorial" /><published>2018-12-14T00:00:00+09:00</published><updated>2018-12-14T00:00:00+09:00</updated><id>http://localhost:4000/iron/Oracle-Blockchain-Cloud-Tutorial</id><content type="html" xml:base="http://localhost:4000/iron/Oracle-Blockchain-Cloud-Tutorial/">&lt;p&gt;### Background ###&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Blockchain
+A blockchain is a system for maintaining distributed ledgers of facts and the history of the ledger’s updates. A blockchain is a continuously growing list of records, called blocks, which are linked and secured using cryptography.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ChainCodes&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Chaincodes&lt;/strong&gt; define the data schema in the ledger, initialize it, perform updates when triggered by applications, and respond to queries. Chaincodes can also post events that allow applications to be notified and perform downstream operations.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Channels&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Channels&lt;/strong&gt; partition and isolate peers and ledger data to provide private and confidential transactions on the blockchain network. Members define and structure channels to allow specific peers to conduct private and confidential transactions that other members on the same blockchain network can’t see or access. Each channel includes peers, the shared ledger, chaincodes instantiated on the channel, and one or more ordering service nodes.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Peer nodes&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Peer nodes&lt;/strong&gt; contain a copy of the ledger and write transactions to the ledger. These nodes can also endorse transactions.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;REST Proxy nodes&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;REST proxy nodes&lt;/strong&gt; map an application identity to a blockchain member, which allows users and applications to call the OABCS REST APIs.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;tutorial&quot;&gt;Tutorial&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/Users/iron/Library/Application Support/typora-user-images/image-20181214105329948.png&quot; alt=&quot;image-20181214105329948&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;deploying-an-example-chaincode-in-oracle-block-chain-service&quot;&gt;Deploying an Example Chaincode in Oracle Block Chain Service&lt;/h3&gt;</content><author><name>C.W.Kim</name></author><category term="OBCS" /><category term=",Tutorial" /><summary type="html">### Background ### Blockchain A blockchain is a system for maintaining distributed ledgers of facts and the history of the ledger’s updates. A blockchain is a continuously growing list of records, called blocks, which are linked and secured using cryptography.</summary></entry><entry><title type="html">struct or class</title><link href="http://localhost:4000/swift/struct-or-class/" rel="alternate" type="text/html" title="struct or class" /><published>2018-12-13T00:00:00+09:00</published><updated>2018-12-13T00:00:00+09:00</updated><id>http://localhost:4000/swift/struct-or-class</id><content type="html" xml:base="http://localhost:4000/swift/struct-or-class/">&lt;h3 id=&quot;struct-or-class&quot;&gt;struct or class&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Architecture is …&lt;/p&gt;
+  &lt;h4 id=&quot;struct-or-class-1&quot;&gt;struct or class&lt;/h4&gt;
+  &lt;p&gt;description&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Independent &lt;strong&gt;deployable&lt;/strong&gt; services&lt;/li&gt;
+    &lt;li&gt;Highly decoupled
+      &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// swift sentence &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Learn how to build iOS apps
+Get started with iOS 12 and Swift 4
+Sign up for our iOS development course Zero to App Store and learn how to build professional iOS 12 apps with Swift 4 and Xcode 10.&lt;/p&gt;
+
+&lt;p&gt;Learn MoreStart for Free
+Structs Are Awesome
+So what are structs good for? It’s preferrable to use structs in these cases:&lt;/p&gt;
+
+&lt;p&gt;For values that are small and easy to copy. Think about database objects you want to pass around in your code, like NewsItem, Task or User. Since they’re so small and well-defined, it’s much easier to pass them around as structs.
+In a multi-threaded environment, for instance with a database connection that’s opened in a different thread, structs are safer. They can be copied from one thread to another thread, without running the risk of a race condition or deadlock. Classes do not have this inherent safety, unless they’re deliberately made thread-safe.
+When the properties of a struct are mostly value types too, like String, it makes sense to wrap them in a struct instead of a class.
+When you don’t need inheritance, or want to use Protocol Oriented Programming, it makes sense to use structs, too.&lt;/p&gt;
+
+&lt;p&gt;Just so we’re on the same page, this is how you define and use a struct:&lt;/p&gt;
+
+&lt;p&gt;struct NewsItem
+{
+​    var title:String = “”
+​    var url:String = “”
+}&lt;/p&gt;
+
+&lt;p&gt;var item = NewsItem()
+item.title = “Comparing Classes vs. Structs in Swift”
+item.url = “https://learnappmaking.com/classes-structs-comparison-swift-programming”&lt;/p&gt;
+
+&lt;p&gt;print(item)
+// Output: NewsItem(title: “Comparing Classes vs. Structs in Swift”, url: “https://learnappmaking.com/classes-structs-comparison-swift-programming”)
+As you can see, the syntax is effectively the same as for defining and using a class. Instead of class [name] { … you write struct [name] { ….&lt;/p&gt;
+
+&lt;p&gt;Speaking of classes…&lt;/p&gt;
+
+&lt;p&gt;What Classes Are Good For
+What are classes good for, if you have structs? As noted before, classes have a few extra characteristics that structs don’t have:&lt;/p&gt;
+
+&lt;p&gt;Classes can inherit from another class, which you can’t do with structs. With classes, you can write class MyViewController : UIViewController to create a subclass of UIViewController. Conversely, structs can implement protocols.
+Classes can be deinitialized, i.e. they can implement a deinit function, and you can make one or more references to the same class (i.e., classes are a reference type).
+Inheritance is the most important difference between classes and struct. With classes, you can clearly define a parent-child connection between subclass and superclass.&lt;/p&gt;
+
+&lt;p&gt;A few examples:&lt;/p&gt;
+
+&lt;p&gt;MyViewController inherits from UIViewController
+MyTableViewController inherits from InfiniteTableViewController to adopt “infinite scrolling”, which in turn inherits from UITableViewController
+Car and Bike both inherit from Vehicle, because they both use the same “basic” set of characteristics like numberOfWheels and speed.
+In these last two examples lies a danger: you can end up with a whole bunch of inherited classes, that all “decorate” the subclass with different functionalities. Think about SuperCar and MuscleCar, that both inherit from Car, and from Vehicle.&lt;/p&gt;
+
+&lt;p&gt;It’s easy to get lost in which class inherits what, even though, at first sight, it makes sense to structure your classes like this. What if SuperCar inherits a function that it doesn’t need from Vehicle? What if you want to create a SuperBike, that’s similar to a SuperCar, but you can’t “inherit” or share those characteristics because they’re in different subclass-superclass hierarchies?&lt;/p&gt;
+
+&lt;p&gt;As a rule of thumb, it only makes sense to use classes for these scenarios1:&lt;/p&gt;
+
+&lt;p&gt;When copying or comparing instances doesn’t make sense, e.g. with Window or UIViewController. It doesn’t make sense to copy an app window, since there’s only one active at a time, and it often doesn’t make sense to copy a view controller either – you’d just create a new one.
+When the “lifetime” of an instance is tied to external effects, e.g. for DatabaseConnection or TemporaryFile. It doesn’t make sense to create two copies of a reference to a file on the disk, after all, they both reference the same data, and represent that data in code. (You don’t write a phone number twice in an address book, right?)
+When instances are just “conduits” for external states, e.g. for CGContext. Sometimes you need a helper or wrapper class to get things done: an API or a reference to an online resource. In those cases the class is only a conduit, something that passes along information, and it doesn’t make sense to create a copy of that.
+As you can see, “to copy, or to reference” is the defining factor to choose between classes or structs. If it makes sense to copy a value, pick structs, if it makes sense to reference a value (and not copy), then choose classes.&lt;/p&gt;</content><author><name>C.W.Kim</name></author><category term="swift" /><summary type="html">struct or class Architecture is … struct or class description Independent deployable services Highly decoupled // swift sentence</summary></entry><entry><title type="html">Python101</title><link href="http://localhost:4000/iron/Python101/" rel="alternate" type="text/html" title="Python101" /><published>2018-12-13T00:00:00+09:00</published><updated>2018-12-13T00:00:00+09:00</updated><id>http://localhost:4000/iron/Python101</id><content type="html" xml:base="http://localhost:4000/iron/Python101/">&lt;h3 id=&quot;python101&quot;&gt;Python101&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Architecture is …&lt;/p&gt;
+  &lt;h4 id=&quot;python101-1&quot;&gt;Python101&lt;/h4&gt;
+  &lt;p&gt;description&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;처음 만나는 파이썬 
+진짜 처음 만나는 사람처럼 써놓았네.&lt;/p&gt;</content><author><name>C.W.Kim</name></author><category term="python" /><summary type="html">Python101 Architecture is … Python101 description</summary></entry><entry><title type="html">박용진 3법의 개요</title><link href="http://localhost:4000/iron/yongjin-3-laws-for-kindergarten/" rel="alternate" type="text/html" title="박용진 3법의 개요" /><published>2018-12-12T00:00:00+09:00</published><updated>2018-12-12T00:00:00+09:00</updated><id>http://localhost:4000/iron/yongjin-3-laws-for-kindergarten</id><content type="html" xml:base="http://localhost:4000/iron/yongjin-3-laws-for-kindergarten/">&lt;h3 id=&quot;무산된-박용진-3법-개요&quot;&gt;무산된 박용진 3법 개요&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;2018 예산안 심의 및 의결과 아울러 유치원 학부모 보조금 관련 비리에 대응하기 위해 마련한 더불어 민주당 박용진 의원 3법의 개요를 가져온 대로 블로그에 적어본다.&lt;/p&gt;
+  &lt;h4 id=&quot;법안의-취지&quot;&gt;법안의 취지&lt;/h4&gt;
+  &lt;p&gt;사립 유치원의 비리에 대해 처벌을 위한 법적 근거와 유치원의 공교육 강화를 위한 입법안입니다.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;아래는 기사와 블로그의 내용을 퍼왔습니다.
+      &lt;h4 id=&quot;법안의-내용&quot;&gt;법안의 내용&lt;/h4&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+
+&lt;span class=&quot;n&quot;&gt;어제&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;한유총&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;한국유치원총연합회&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;은&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;집단행동을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;자제하겠다던&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;말을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;바로&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;철회하고&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;경찰&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;추산&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;천여명이&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;모여&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;유치원&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;법&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;박용진&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;법&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;통과시키면&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;안된다고&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;집회를&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;열었습니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;월&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;일&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;소위가&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;열릴&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;때&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;유치원&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;법을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;통과시키는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;걸&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;저지하기&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;위해&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;실력행사를&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;한&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;겁니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;그럼&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;유치원&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;법&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;소위&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;말하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;박용진&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;법이란&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;무엇인가요&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;여기에선&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;발의자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;박용진의원의&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;명을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;딴&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;박용진&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;법으로&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;통일하겠습니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;￼&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;박용진의원이&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;보고한&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;사립&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;유치원들에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;비리에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;대해서&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;보셨을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;겁니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;관련포스팅&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;박용진&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;법이란&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;사립유치원&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;비리를&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;근절하기&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;위해&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;사립학교법과&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;유아교육법&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;학교금식법&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;등&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;가지&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;법을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;개정하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;것을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;말합니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;박용진&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;법이&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;통과하면&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;에듀파인&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;사용&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;의무화&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;비리&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;유치원&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;재개원&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;금지&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;사립유치원&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;설립자가&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;유치원&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;원장&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;겸임&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;금지&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;급식&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;부정&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;금지&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;등&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;다양한&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;효과가&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;나올&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;수&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;있기에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;대부분의&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;사람들은&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;환영하고&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;있습니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;아래는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;박용진&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;법의&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;주요&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;내용들입니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;유아교육법&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;일부개정법률안&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;회계프로그램의&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;사용&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;에듀파인&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;법에&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;명시&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;회계&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;투명화&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;유치원에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;지원되는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;지원금을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;보조금으로&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;변경&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;횡령죄&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;판단&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;명확화&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;비리&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;유치원&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;유치원명&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;변경해&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;재개원&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;금지&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;실질적인&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;유치원&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;운영정보&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;볼&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;수&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;있도록&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하고&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;유치원&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;관련&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;제도개선&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;사항&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;반영&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;사립학교법&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;일부개정법률안&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;교비회계에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;속하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;수입&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;및&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;재산을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;부정&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;사용&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;금지&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;유치원만&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;운영하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;학교법인&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;이사장&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;설립자&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;가&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;원장&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;겸직&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;금지&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;학교급식법&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;개정안&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;현행&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;학교급식법의&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;법&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;적용&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;대상에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;유치원&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;포함&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;출처&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;181023&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;박용진3법&quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;당론발의&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;작성자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;박용진&lt;/span&gt;
+
+
+
+&lt;span class=&quot;n&quot;&gt;이외에도&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;자유한국당을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;통해&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;한유총은&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;자신들의&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;이익을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;대변할&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;수&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;있는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;법안을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;국회에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;통과시키려고&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하고&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;있는데요&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;그&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;내용도&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;살펴보면&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;아래와&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;같습니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;사립유치원에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;시설사용료&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;공적사용료&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;보상&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;제공&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;스스로&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;시설을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;교육사업에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;제공&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;공공필요에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;따른&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;재산권&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;제한&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;으로&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;볼&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;수&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;없음&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;박용진&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;법이&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;통과해&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;올바른&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;교육&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;정책이&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;수립될&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;수&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;있고&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;투명한&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;유치원&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;회계를&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;기대해&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;봅니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+
+
+&lt;span class=&quot;nv&quot;&gt;출처&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//garius.tistory.com/237 [균형잡힌 시각]&lt;/span&gt;
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;경향신문-기사-내용&quot;&gt;경향신문 기사 내용&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://img.khan.co.kr/news/2018/10/19/l_2018101901002424200183181.jpg&quot; alt=&quot;19일 오전 경남도교육청에서 열린 국회 교육위원회의 경남도교육청에 대한 국정감사에서 더불어민주당 박용진 의원이 질의하고 있다. 연합뉴스&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+박용진 ‘사립유치원 비리근절 3법’ 내용은?
+
+김한솔 기자 hansol@kyunghyang.com
+
+
+
+
+국회 국정감사에서 사립유치원 비리 실태를 공개한 더불어민주당 박용진 의원이 19일 사립유치원 회계 투명화 등의 내용을 담은 ‘사립유치원 비리 근절 3법’을 공개했다. 3법은 유아교육법 일부개정안·사립학교법 일부개정안·학교급식법 일부개정안이다. 
+
+■사립유치원도 회계관리시스템 사용 의무화 
+
+유아교육법 개정안 내용의 핵심은 사립유치원에 회계관리시스템 사용을 의무화하고, 회계 항목을 교육부령으로 정하는 세입세출 항목에 따라 세분화해 입력토록 하는 것이다. 
+
+현행법은 사립유치원에 회계관리시스템 사용 의무를 명시하지 않고, “교육부 장관과 교육감은 유치원 및 교육행정기관의 업무를 전자적으로 처리할 수 있도록 유아교육정보시스템을 구축·운영할 수 있다”(제19조의2 1항)고 되어있다. 개정안은 이 조항에 ‘교육행정기관의 업무’에 “회계관리가 포함된다”를 추가했고, “유치원은 회계관리 업무를 위해 1항에 따라 구축된 정보시스템을 사용하여야 한다”고 명시했다. 
+
+사실 교육부는 지난해 2월 이미 ‘사학기관 재무회계 규칙’을 개정하면서 “2017년 중 사립유치원 회계관리시스템 구축을 검토하고, 중장기적으로 시스템 개발을 추진해 적용하겠다”고 밝힌 바 있다. 하지만 이후 “전국 유치원 실태조사 결과 상당수의 유치원들이 민간 회계프로그램을 쓰고 있었다”며 “공공개발소프트웨어를 민간 영역에 도입할 경우에 대한 영향평가가 필요하다”는 이유로 사립유치원에 별도의 회계프로그램을 도입하지 않았다.
+
+판교역 연결!판교 중심특권!
+박 의원실 관계자는 “교육부 말은 사립유치원들이 이미 민간회계프로그램을 쓰고 있다는 것인데, 모든 사립유치원들이 민간회계프로그램을 쓰고 있진 않다”며 “쓴다 하더라도 항목을 뒤섞어 마음대로 게재하는 경우가 많다”고 지적했다. 
+
+당정은 21일 예정된 비공개 당정협의에서 현재 국·공립 유치원이 사용하고 있는 회계프로그램인 ‘에듀파인’을 사립유치원에 적용하는 방안에 대해 논의 할 예정이다. 
+
+
+■설립자-원장 겸직 금지 
+
+사립학교법 개정안에는 유치원을 설립한 이가 유치원 원장을 겸직하지 못하게 하는 내용이 담겼다.
+
+현행 사립학교법에는 ‘유치원만을 설치·경영하는 학교법인 이사장은 당해 유치원장을 겸할 수 있다’(23조)고 되어있는데, 이를 삭제하는 것이다. 
+
+최근 논란이 된 지원금으로 명품백·성인용품 구매하거나 자동차 보험금, 자녀 등록금을 납부하는 등의 비위 사례는 대부분 사립유치원 원장과 그 가족에 의해 행해진 것이었다. 현재 대부분의 사립유치원은 설립자가 유치원 원장을 맡고 있다. 그런데 현행 사립학교법상 비위 적발시 징계위원회 구성의 권한은 사립학교 경영자에 주어져 있다. 결국 비위 행위를 한 사립유치원 원장의 경우, 자기가 자기 자신을 ‘셀프 징계’해야 하는 상황이 되는 것이다.
+
+박 의원은 제안 이유에서 “현재 사립유치원 설립자의 경우 유치원이 사유재산이라는 인식이 강하여 사인인 설립자나 원장이 교비회계에 속하는 수입이나 재산을 교육목적 외로 부정하게 사용하는 경우가 상당수 적발되고 있다”고 밝혔다. 
+
+
+■유치원 급식도 학교급식법 적용 받아야 
+
+학교급식법 개정안은 현재 ‘학교급식 대상’에 유치원을 포함시켜, 관련법의 통제를 받도록 하는 것을 골자로 한다. 박 의원은 제안 이유에서 “유아교육법에 따라 유치원 워장이 유아에게 적합한 급식을 할 수 있다고 하여 유치원 급식이 이루어지고 있지만, 현장에선 관련법 미흡으로 인한 유아의 부실급식 논란이 계속 발생하고 있다”며 “유치원도 현행법의 적용을 받아 유치원운영위 심의를 거쳐 일정요건을 갖춘 자에게만 급식 업무를 위탁하게 하여 유아들의 먹을거리 안전과 급식의 질을 보장하고자 한다”고 밝혔다
+
+
+
+원문보기: 
+http://news.khan.co.kr/kh_news/khan_art_view.html?art_id=201810191511001#csidx53b0c1e648359d4bd92c82ec55b970f 
+
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>C.W.Kim</name></author><category term="박용진3법," /><category term="사립" /><category term="유치원" /><summary type="html">무산된 박용진 3법 개요 2018 예산안 심의 및 의결과 아울러 유치원 학부모 보조금 관련 비리에 대응하기 위해 마련한 더불어 민주당 박용진 의원 3법의 개요를 가져온 대로 블로그에 적어본다. 법안의 취지 사립 유치원의 비리에 대해 처벌을 위한 법적 근거와 유치원의 공교육 강화를 위한 입법안입니다. 아래는 기사와 블로그의 내용을 퍼왔습니다. 법안의 내용</summary></entry><entry><title type="html">New Term</title><link href="http://localhost:4000/iron/New-Term/" rel="alternate" type="text/html" title="New Term" /><published>2018-04-23T20:06:43+09:00</published><updated>2018-04-23T20:06:43+09:00</updated><id>http://localhost:4000/iron/New-Term</id><content type="html" xml:base="http://localhost:4000/iron/New-Term/">&lt;h3 id=&quot;new-term--01&quot;&gt;New Term # 01&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Architecture is …&lt;/p&gt;
+  &lt;h4 id=&quot;new-term&quot;&gt;New term&lt;/h4&gt;
+  &lt;p&gt;The microservice architectural style&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;GNB - Global Navigation Bar&lt;/li&gt;
+    &lt;li&gt;Highly decoupled
+      &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Javascript manner &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;      &lt;/div&gt;
+      &lt;p&gt;!BlockChain](https://ironhub.github.io/assets/BlockChain@3x.png)&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;</content><author><name>C.W.Kim</name></author><category term="term" /><summary type="html">New Term # 01 Architecture is … New term The microservice architectural style GNB - Global Navigation Bar Highly decoupled // Javascript manner !BlockChain](https://ironhub.github.io/assets/BlockChain@3x.png)</summary></entry><entry><title type="html">Machine Learning</title><link href="http://localhost:4000/iron/Machine-Learning/" rel="alternate" type="text/html" title="Machine Learning" /><published>2018-04-09T19:37:42+09:00</published><updated>2018-04-09T19:37:42+09:00</updated><id>http://localhost:4000/iron/Machine-Learning</id><content type="html" xml:base="http://localhost:4000/iron/Machine-Learning/">&lt;h3 id=&quot;machine-learning&quot;&gt;Machine Learning&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Machine Learning 은?&lt;/p&gt;
+  &lt;h4 id=&quot;machine-learning-basic&quot;&gt;Machine Learning Basic&lt;/h4&gt;
+  &lt;p&gt;The microservice architectural style 
+Textbook 은 무엇으로 ?&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>C.W.Kim</name></author><category term="Machine" /><category term="Learning" /><summary type="html">Machine Learning Machine Learning 은? Machine Learning Basic The microservice architectural style Textbook 은 무엇으로 ?</summary></entry><entry><title type="html">Networking</title><link href="http://localhost:4000/iron/Networking/" rel="alternate" type="text/html" title="Networking" /><published>2018-03-14T18:49:47+09:00</published><updated>2018-03-14T18:49:47+09:00</updated><id>http://localhost:4000/iron/Networking-</id><content type="html" xml:base="http://localhost:4000/iron/Networking/">&lt;h3 id=&quot;networking-basic&quot;&gt;Networking Basic&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;후니의 쉽게 쓴 시스코 네트워킹을 대충 읽고
+이더넷 , 토큰링, FDDI, ATM - 네트워킹 방식&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;CSMA/CD ( Carrier Sense Multiple Access/ Collision Detection )&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;LAN 안에서 통신하는 녀석이 있는 지 없는 지 확인하고 재빨리 보내다가 충돌이 나면 랜덤으로 잠시 쉬는 것&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Collision Domain 에 있기 때문에 한 PC 만이 데이터를 보낼수 있음.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;토큰링은 순서(토큰) 를 받아야 데이터를 전송할수 있음.&lt;/p&gt;
+
+&lt;p&gt;UTP 케이블 , 광케이블, 동축 케이블&lt;/p&gt;
+
+&lt;p&gt;RJ_45 커넥터 + UTP 케이블&lt;/p&gt;
+
+&lt;p&gt;MAC(Media Access Control )&lt;/p&gt;
+
+&lt;p&gt;ARP ( Address Resolution Protocol ) - IP 주소 를 MAC 어드레스로 바꿔줌.&lt;/p&gt;
+
+&lt;p&gt;유니캐스트  - 소스와 타겟이 있어서 지정한 타겟으로 보내는 것&lt;/p&gt;
+
+&lt;p&gt;브로드캐스트 - 전체 LAN에 있는 디바이스에 다 보내며, 랜카드는 반드시 CPU로 처리해줄것을 Interrupt 함.&lt;/p&gt;
+
+&lt;p&gt;멀티캐스트 -  다중 타겟에게 보냄. 브로드 캐스트는 아니나, 허브나 스위치가 멀티 캐스트를 지원해 주어야 함.&lt;/p&gt;
+
+&lt;p&gt;OSI 7 레이어 - 애 프 스 트 엔 들 피 application - presentation - session - transport - network - data link - pysical&lt;/p&gt;
+
+&lt;p&gt;TCP/IP , IPX(Internetwork packet exchange) , NetBEUI, AppleTalk&lt;/p&gt;
+
+&lt;p&gt;TCP/IP ( Transmission Control Protocol / Internet Protocol ) - ARPANET&lt;/p&gt;
+
+&lt;p&gt;IP 주소는 유일 , 공유하기 위해 NAT ( Network Address Translation ) / PAT ( Port ..)&lt;/p&gt;
+
+&lt;p&gt;NIC  - Network Interface Card&lt;/p&gt;
+
+&lt;p&gt;NIC - Network Information Center - 공인IP 주소 관리 기관&lt;/p&gt;
+
+&lt;p&gt;DHCP - Dynamic Host Configuration Protocol - Server/ Client 로 구성&lt;/p&gt;
+
+&lt;p&gt;랜카드&lt;/p&gt;
+
+&lt;p&gt;허브 - 멀티포트 리피터 역할&lt;/p&gt;
+
+&lt;p&gt;인텔리전트 허브 - 콜리전 발생의 경우 격리 가능 / 더미 허브&lt;/p&gt;
+
+&lt;p&gt;스위치 - 스패닝 트리 알고리즘 ( 루핑을 막아주고자 두개 이상의 경로가 존재하면 한 통로를 막고 다른 통로가 사용할 수 없으면 여는 방식 )&lt;/p&gt;
+
+&lt;p&gt;라우터 - 브로드캐스트 영역을 나눠주기 위해 필요함. 패킷 필터링 기능을 제공함, 로드를 분배하는 기능, 트래픽 전송 순서 조정 QoS&lt;/p&gt;
+
+&lt;p&gt;스위치 중에 라우터 기능을 포함하는 것을 L/3 스위치라고 함.&lt;/p&gt;
+
+&lt;p&gt;IP 클래스 :  A : 1~126 앞자리&lt;/p&gt;
+
+&lt;p&gt;​		  B : 128 ~ 191&lt;/p&gt;
+
+&lt;p&gt;​		  C : 192 ~ 223&lt;/p&gt;
+
+&lt;p&gt;​		  10.3.4.3 의 경우 A 클래스이고 네트워크 부분은 10.0.0.0 호스트부분은 3.4.3&lt;/p&gt;
+
+&lt;p&gt;​		  132.12.11.4 의 경우 B  클래스이고 네트워크부분은 132.12.0.0 호스트부분은 11.4`&lt;/p&gt;
+
+&lt;p&gt;콜리전 도메인을 막는 방법은 스위치로 나누는 것이고, 브로드캐스트를 막는 방법은 라우터이다.&lt;/p&gt;</content><author><name>C.W.Kim</name></author><category term="networking" /><category term="basic" /><summary type="html">Networking Basic 후니의 쉽게 쓴 시스코 네트워킹을 대충 읽고 이더넷 , 토큰링, FDDI, ATM - 네트워킹 방식</summary></entry><entry><title type="html">Docker NodeJS Image</title><link href="http://localhost:4000/iron/Docker-NodeJS-Image/" rel="alternate" type="text/html" title="Docker NodeJS Image" /><published>2018-02-21T00:26:45+09:00</published><updated>2018-02-21T00:26:45+09:00</updated><id>http://localhost:4000/iron/Docker-NodeJS-Image-</id><content type="html" xml:base="http://localhost:4000/iron/Docker-NodeJS-Image/">&lt;h3 id=&quot;making-docker-nodejs-image--register-dockerhub--deploy-to-occs&quot;&gt;Making Docker NodeJS Image / Register Dockerhub / Deploy to OCCS&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Node.JS Application을 포함하는 도커 이미지를 만들고,  dockerhub.com 에 public으로 발행하고&lt;/p&gt;
+
+  &lt;p&gt;Oracle Container Cloud Service Classic 에 올려보는 것 까지.&lt;/p&gt;
+  &lt;h4 id=&quot;nodejs-도커-이미지-만들기&quot;&gt;Node.JS 도커 이미지 만들기&lt;/h4&gt;
+  &lt;p&gt;잘 만들어진 Node.JS 애플리케이션을 준비한다.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;튜토리얼 URL &lt;a href=&quot;https://nodejs.org/en/docs/guides/nodejs-docker-webapp/&quot;&gt;NodeJS Docker Image 만들기&lt;/a&gt;
+&lt;img src=&quot;https://ironhub.github.io/assets/screenshots/nodejsDockerDirectory.png&quot; alt=&quot;예제 디렉토리 구조&quot; /&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;그림과 같이 잘 돌아가는 Node.JS 애플리케이션 디렉토리에&lt;/p&gt;
+
+&lt;p&gt;Dockerfile 을 만든다&lt;/p&gt;
+
+&lt;h3 id=&quot;dockerfile&quot;&gt;DockerFile&lt;/h3&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; Dockerfile
+
+FROM node:carbon
+
+&lt;span class=&quot;c&quot;&gt;#Create app directory&lt;/span&gt;
+WORKDIR /usr/src/app
+
+&lt;span class=&quot;c&quot;&gt;#npm install 을 실행하여 node_modules 를 만들기 위해&lt;/span&gt;
+COPY package&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.json ./
+RUN npm &lt;span class=&quot;nb&quot;&gt;install 
+
+&lt;/span&gt;COPY &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#외부에 공개하는 포트&lt;/span&gt;
+EXPOSE 8080
+CMD &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;npm&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;start&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; .dockerignore
+node_modules
+npm-debug.log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Dockerfile이 있는 해당 디렉토리에서&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; docker build &lt;span class=&quot;nt&quot;&gt;--tag&lt;/span&gt; iamairon/node-web-app
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; docker images
+iamairon/node-web-app         latest              69c69164d76c        26 minutes ago      698MB
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; docker run &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8080:3000 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; iamairon/node-web-app
+    &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8080&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;외부포트&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:3000&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;내부포트&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+	docker run &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8080:3000 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; iamairon/node-web-app
+	8bcf114ff25a65447b9baede61d1e02a6ccd1ab3bd07f8af166f0bb4954714d3
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; docker logs 8bcf114ff25a65447b9baede61d1e02a6ccd1ab3bd07f8af166f0bb4954714d3
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; expressjs@1.0.0 start /usr/src/app
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; node app/app.js
+
+Listening on port 3000
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;###Docker Hub에 올리기 ###&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; docker login
+Login with your Docker ID to push and pull images from Docker Hub. If you don&lt;span class=&quot;s1&quot;&gt;'t have a Docker ID, head over to https://hub.docker.com to create one.
+Username (iamairon):
+Password:
+Login Succeeded
+&amp;gt; docker push iamairon/node-web-app:latest
+The push refers to repository [docker.io/iamairon/node-web-app]
+fc198206b3c9: Pushed
+3b2c25edc456: Pushed
+8f2f41483350: Pushed
+f79293fc11b5: Pushed
+8e3a6d61dcdb: Mounted from library/node
+3a19394b2eae: Mounted from library/node
+2e1fd498af59: Mounted from library/node
+daa6e91e491c: Mounted from library/node
+6b60013e5875: Mounted from library/node
+d6335a641f5e: Mounted from library/node
+5c33df241050: Mounted from library/node
+ffc4c11463ee: Mounted from library/node
+latest: digest: sha256:8114a3f2bef02c47c74e811001f5a0155854c014cc1aa0b842a9259335b1096d size: 2845
+
+
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://ironhub.github.io/assets/screenshots/dockerhubRegistration.png&quot; alt=&quot;도커 허브 등록 모습&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;oracle-container-cloud-service-에-등록&quot;&gt;Oracle Container Cloud Service 에 등록&lt;/h3&gt;
+
+&lt;p&gt;OCCS Create Instance 를 하면 , Manager/ Worker 기본 두개의 OCPU를 점유하는 서비스가 만들어진다.
+만들어진 manager public ip 로 접근하면
+다음과 같은 예로 https://129.157.187.109/#/dashboard&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://ironhub.github.io/assets/screenshots/OCCS01.png&quot; alt=&quot;OCCS 서비에서 콘솔 열기&quot; /&gt;
+다음과 같은 id/pwd 로긴 창이 뜨고 인스턴스 만들때 지정했던 admin / pwd 로 접근하면 다음과 같은 대시보드가 열린다. 
+&lt;img src=&quot;https://ironhub.github.io/assets/screenshots/OCCS02.png&quot; alt=&quot;OCCS 관리자 콘솔 로그인&quot; /&gt;
+&lt;img src=&quot;https://ironhub.github.io/assets/screenshots/OCCS03.png&quot; alt=&quot;OCCS 관리자 콘솔 대시보드&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;서비스-등록&quot;&gt;서비스 등록&lt;/h4&gt;
+&lt;p&gt;왼쪽 메뉴의 Services 를 눌러
+&lt;img src=&quot;https://ironhub.github.io/assets/screenshots/OCCS04.png&quot; alt=&quot;OCCS Services&quot; /&gt;
+&lt;img src=&quot;https://ironhub.github.io/assets/screenshots/OCCS05.png&quot; alt=&quot;OCCS Services -&amp;gt; New Service  서비스 등록&quot; /&gt;
+docker run 추가 커맨드를 작성한다. 그림의 예는  외부포트/내부포트 지정
+&lt;img src=&quot;https://ironhub.github.io/assets/screenshots/OCCS06.png&quot; alt=&quot;서비스 등록 - 도커 커맨드&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;deployment&quot;&gt;Deployment&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://ironhub.github.io/assets/screenshots/OCCS07.png&quot; alt=&quot;디플로이&quot; /&gt;
+&lt;img src=&quot;https://ironhub.github.io/assets/screenshots/OCCS08.png&quot; alt=&quot;디플로이 상태&quot; /&gt;&lt;/p&gt;</content><author><name>C.W.Kim</name></author><category term="docker" /><category term="nodejs" /><summary type="html">Making Docker NodeJS Image / Register Dockerhub / Deploy to OCCS Node.JS Application을 포함하는 도커 이미지를 만들고, dockerhub.com 에 public으로 발행하고 Oracle Container Cloud Service Classic 에 올려보는 것 까지. Node.JS 도커 이미지 만들기 잘 만들어진 Node.JS 애플리케이션을 준비한다. 튜토리얼 URL NodeJS Docker Image 만들기</summary></entry><entry><title type="html">Swift Dynamic Table View</title><link href="http://localhost:4000/iron/Swift-Dynamic-Table-View/" rel="alternate" type="text/html" title="Swift Dynamic Table View" /><published>2018-02-10T00:03:22+09:00</published><updated>2018-02-10T00:03:22+09:00</updated><id>http://localhost:4000/iron/Swift-Dynamic-Table-View</id><content type="html" xml:base="http://localhost:4000/iron/Swift-Dynamic-Table-View/">&lt;h3 id=&quot;swift-dynamic-table-view&quot;&gt;Swift Dynamic Table View&lt;/h3&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;kd&quot;&gt;@IBAction&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addAction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;sender&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;indexPath&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tableView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;indexPathForSelectedRow&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;cell&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tableView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cellForRow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;indexPath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as!&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;DynamicTableViewCell&lt;/span&gt;
+            
+            &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;field&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UITextField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CGRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blue&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;backgroundColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yellow&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Good Morning ~~~~ &quot;&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//print(field.systemLayoutSizeFitting(CGSize(width: 300, height:100 )))&lt;/span&gt;
+            
+           &lt;span class=&quot;c1&quot;&gt;// let cField = cell.dynamicField[0] // cell.dynamicField[0].copy() as! DesignableTextField&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;dField&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dynamicField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;removeAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;keepingCapacity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dynamicField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//cell.stackView.addArrangedSubview(field)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;rowHeight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stackView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dynamicField&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;......&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;c1&quot;&gt;//d.translatesAutoresizingMaskIntoConstraints = false&lt;/span&gt;
+               &lt;span class=&quot;c1&quot;&gt;// d.heightAnchor.constraint(equalToConstant: 300).isActive = true&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stackView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addArrangedSubview&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;height =   &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heightAnchor&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;rowHeight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rowHeight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;
+                &lt;span class=&quot;c1&quot;&gt;//cell.stackView.addSubview(d)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//cell?.  //    addSubview(field)&lt;/span&gt;
+            
+            &lt;span class=&quot;c1&quot;&gt;//tableView.estimatedRowHeight = UITableViewAutomaticDimension&lt;/span&gt;
+            
+            &lt;span class=&quot;c1&quot;&gt;//tableView.rowHeight =  cell.stackView.frame.height + 40&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//UITableViewAutomaticDimension&lt;/span&gt;
+            
+            
+            &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;indexPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rowHeight&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tableView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reloadData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    
+    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;DesignableTextField&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// make random and unique Number&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unique&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timeIntervalSince1970&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;fieldName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;IR &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unique&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;fields&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fieldName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        
+        
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;field&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;DesignableTextField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CGRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        
+        &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cornerRadius&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;backgroundColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blue&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;white&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fieldName&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textAlignment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;center&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// https://stackoverflow.com/questions/26180822/swift-adding-constraints-programmatically&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//field.addConstraint() -- 9.0 이전 방식&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;widthAnchor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;constraint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;equalToConstant&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isActive&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;heightConstraint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heightAnchor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;constraint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;equalToConstant&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;300.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;heightConstraint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isActive&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Height Constraint = &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heightConstraint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;constant&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>C.W.Kim</name></author><category term="Swift" /><category term="Dynamic" /><category term="TableView" /><summary type="html">Swift Dynamic Table View</summary></entry></feed>

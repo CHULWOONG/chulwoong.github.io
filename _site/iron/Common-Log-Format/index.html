@@ -1,0 +1,2267 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.14.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Common Log Format - Iron’s Home</title>
+<meta name="description" content="Common Log Format  Common Log format is a.k.a NCSA Common log format is standardized text file format used by web servers when generating server log files - Wikipedia      NCSA HTTPd - 1993~5 년쯤에는 웹서버 점유율 1위 하고 있었다가 Apache 의 등장으로 빠르게 대체됨.  ">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Iron's Home">
+<meta property="og:title" content="Common Log Format">
+<meta property="og:url" content="http://localhost:4000/iron/Common-Log-Format/">
+
+
+  <meta property="og:description" content="Common Log Format  Common Log format is a.k.a NCSA Common log format is standardized text file format used by web servers when generating server log files - Wikipedia      NCSA HTTPd - 1993~5 년쯤에는 웹서버 점유율 1위 하고 있었다가 Apache 의 등장으로 빠르게 대체됨.  ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-01-09T18:46:10+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/iron/Common-Log-Format/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "C.W. Kim",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Iron's Home Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--post wide">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Iron's Home</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/" >Quick-Start Guide</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/about/" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/" >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/collection-archive/" >Collections</a>
+            </li><li class="masthead__menu-item">
+              <a href="/sitemap/" >Sitemap</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#iron" itemprop="item"><span itemprop="name">Iron</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Common Log Format</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">Common Log Format</h1>
+    
+    <h3 id="common-log-format">Common Log Format</h3>
+<blockquote>
+  <p>Common Log format is a.k.a NCSA Common log format is standardized text file format used by web servers when generating server log files - Wikipedia</p>
+  <ul>
+    <li>NCSA HTTPd - 1993~5 년쯤에는 웹서버 점유율 1위 하고 있었다가 Apache 의 등장으로 빠르게 대체됨.</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>
+    <p>NCSA HTTPd 의 서버 로그파일 포맷이 현재의 Common Log Format 의 원형</p>
+  </li>
+  <li>다음과 같은 형식
+    <div class="language-apache highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  remotehost rfc931 authuser [date] "request" status bytes
+    
+  remotehost : 원격 호스트 이름
+  rfc931 : 사용자의 원격 로그 이름
+  authuser: 인증 유저 이름
+  <span class="err">[</span>date] : request 의 날짜와 시간
+  <span class="err">"</span>request" : 클라이언트로부터 온 그대로의 request line 
+  status : HTTP Status Code 
+  bytes : 전달 받은 다큐먼트의 컨텐트 길이
+</code></pre></div>    </div>
+  </li>
+  <li>​</li>
+</ul>
+
+
+<ul class="taxonomy__index">
+  
+  
+    <li>
+      <a href="#2019">
+        <strong>2019</strong> <span class="taxonomy__count">1</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2018">
+        <strong>2018</strong> <span class="taxonomy__count">20</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2017">
+        <strong>2017</strong> <span class="taxonomy__count">38</span>
+      </a>
+    </li>
+  
+</ul>
+
+
+
+  <section id="2019" class="taxonomy__section">
+    <h2 class="archive__subtitle">2019</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/IhaveanIdea/" rel="permalink">IhaveanIdea
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">아이디어가 있어요
+
+  계속 갱신하면서 올 한해 아이디어를 daily coding으로 옮겨보고자 함
+  #01. Lineup
+  총평 - 계속 해온 거지만, 제품화 하기엔 부족함
+  
+    사야 감독이 되어 선수들의 라인업을 작성하고 공유하는 시스템
+      // swift s...</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2018" class="taxonomy__section">
+    <h2 class="archive__subtitle">2018</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Oracle-Blockchain-Cloud-Tutorial/" rel="permalink">Oracle Blockchain Cloud Tutorial
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">### Background ###
+
+  Blockchain
+A blockchain is a system for maintaining distributed ledgers of facts and the history of the ledger’s updates. A blockchain ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/swift/struct-or-class/" rel="permalink">struct or class
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">struct or class
+
+  Architecture is …
+  struct or class
+  description
+  
+    Independent deployable services
+    Highly decoupled
+      // swift sentence 
+   ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Python101/" rel="permalink">Python101
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Python101
+
+  Architecture is …
+  Python101
+  description
+
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/yongjin-3-laws-for-kindergarten/" rel="permalink">박용진 3법의 개요
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">무산된 박용진 3법 개요
+
+  2018 예산안 심의 및 의결과 아울러 유치원 학부모 보조금 관련 비리에 대응하기 위해 마련한 더불어 민주당 박용진 의원 3법의 개요를 가져온 대로 블로그에 적어본다.
+  법안의 취지
+  사립 유치원의 비리에 대해 처벌을 위한 법적 근거와 유치원의 공...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/New-Term/" rel="permalink">New Term
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">New Term # 01
+
+  Architecture is …
+  New term
+  The microservice architectural style
+  
+    GNB - Global Navigation Bar
+    Highly decoupled
+      // Javascr...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Machine-Learning/" rel="permalink">Machine Learning
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Machine Learning
+
+  Machine Learning 은?
+  Machine Learning Basic
+  The microservice architectural style 
+Textbook 은 무엇으로 ?
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Networking/" rel="permalink">Networking
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Networking Basic
+
+  후니의 쉽게 쓴 시스코 네트워킹을 대충 읽고
+이더넷 , 토큰링, FDDI, ATM - 네트워킹 방식
+
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Docker-NodeJS-Image/" rel="permalink">Docker NodeJS Image
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Making Docker NodeJS Image / Register Dockerhub / Deploy to OCCS
+
+  Node.JS Application을 포함하는 도커 이미지를 만들고,  dockerhub.com 에 public으로 발행하고
+
+  Oracle Container...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Swift-Dynamic-Table-View/" rel="permalink">Swift Dynamic Table View
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Swift Dynamic Table View
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/API-Design/" rel="permalink">API Design
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">API Design
+
+  Architecture is …
+  Microservices Architecture
+  The microservice architectural style
+  
+    Independent deployable services
+    Highly decoupl...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/mongo-db-update/" rel="permalink">mongo db update
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">mongo db update
+
+  Mongodb 를 default 로 설치 , 설정했더니,
+
+  중국의 어떤 넘이 들어와서 데이터를 날리더라.
+
+  그래서……
+
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/DSL-GPL/" rel="permalink">DSL, GPL
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">DSL, GPL
+
+  Domain Specific Language : 도메인에 한정적인 언어로 , 어떤 도메인에만 국한된 언어를 뜻함. 이와 대조적으로 General purpose Language 는 어떤 영역에서도 활용할수 있는 범용적인 컴퓨터 언어를 뜻함.
+
+  예를 들어 HT...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Serif-vs-Sans-Serif/" rel="permalink">Serif vs Sans Serif
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Serif vs Sans Serif
+
+  세리프 와 산세리프
+
+  Sans : 프랑스어로 없음을 뜻함.
+
+  세리프 : 활자에 많이 사용함 글자의 끝에 삐침 같은 것이 있는 문자체를 뜻함.
+
+  산세리프 : 광고, 프리젠테이션 등에 사용
+
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/serverless-computing/" rel="permalink">serverless computing
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">serverless computing
+
+  Serverless architectures refer to applications that significantly depend on third-party services (knows as Backend as a Service or “B...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Container-linux/" rel="permalink">Container linux
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Container linux
+
+
+  Container Linux by CoreOS, originally named CoreOS Linux, is an open source operating system (OS) that provides the functionality require...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Common-Log-Format/" rel="permalink">Common Log Format
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Common Log Format
+
+  Common Log format is a.k.a NCSA Common log format is standardized text file format used by web servers when generating server log files ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/terminology-of-/" rel="permalink">terminology of ….
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">terminology of ….
+
+  landmine and FUD
+    
+      Fear, Uncertainty and Doubt
+    
+  
+  Greenfield
+    
+      상용화가 되어본적 없는
+    
+  
+  ​
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Kubernetes/" rel="permalink">Kubernetes
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Kubernetes
+
+  Kubernetes  Kubernetes is an open-source platform designed to automate deploying, scaling, and operating application containers.
+  어원
+  그리스어로 조...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/docker-basic/" rel="permalink">docker basic
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">docker basic
+
+  간단한 명령어에 대해 알아본다.
+
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Docker-install-on-Oracle-Linux-7/" rel="permalink">Docker install on Oracle Linux 7
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Docker install on Oracle Linux 7
+
+  Oracle Linux 7 에 Docker를 인스톨하는 과정과 http://container-registry.oracle.com/ 에 등록되어 있는 이미지를 가져와서 - WebLogic Server - running ...</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2017" class="taxonomy__section">
+    <h2 class="archive__subtitle">2017</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/1987/" rel="permalink">1987
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">1987 영화를 보고
+
+  1987 - 고등학교 선배님이 만든 영화
+
+  느낌
+
+  박종철 고문 치사 사건과 이한열 열사 시위 도중 취루탄에 맞아 사망한 사건을 계기로 군사 정권 연장을 획책하던 때에 호헌철폐 , 독재 타도 라는 구호로 전 국민의 힘으로 대통령 직선제와 민주화라는 ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/NGINX/" rel="permalink">NGINX
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">NGINX
+
+  가벼운 웹서버 , Apache 를 무섭게 추격하는 중 대충 20 여% 의 전세계 점유율
+
+  그리고 비동기적인 서버 운영 방식, node.js 와 죽이 잘 맞는다.
+  NGINX install
+  Linux 플랫폼인 경우 - Oracle Linux 는 Redhat,...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Enterprise-Javascript/" rel="permalink">Enterprise Javascript
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Enterprise Javascript
+
+  Forrester Report - The Dawn of Enterprise Javascript  - by Charistopher Mines, Jeffery S. Hammond and Nathaniel Fleming ( 2015.4.1) ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/HTML5/" rel="permalink">HTML5
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">HTML5
+
+  HTML syntax 정리
+  Resources
+
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Autonomous-Data-Warehose-Cloud/" rel="permalink">Autonomous Data Warehose Cloud
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Autonomous Data Warehose Cloud
+
+  자율적인 데이터 웨어하우스 클라우드 교육 정리
+  
+    Fully Autonomous
+      
+        Simple
+          
+            자동화로 administration , operat...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/JavaScript-Handling-an-Array/" rel="permalink">JavaScript Handling an Array
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">JavaScript Handling an Array
+
+  An example of Handling an array in JavaScript
+
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Alamofire-HTTP-Request/" rel="permalink">Alamofire HTTP Request
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Alamofire HTTP Request
+
+  Alamofire HTTP Post -&gt; REST -&gt; Node.JS
+
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/RESTful/" rel="permalink">REST
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">REST
+
+  Representational State Transfer
+  규칙
+  URI : 자원을 표현해야 하고
+
+  HTTP 메써드( GET,POST,PUT,PATCH,DELETE) 로 자원을 조작
+
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Compute-Classic/" rel="permalink">Compute Classic
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Compute Classic
+
+  오라클 클라우드 컴퓨트 클래식에서 인스턴스를 만들어보자.
+  Subscription
+  
+    클라우드  Subscription 했다 치자
+    SSH를 위한 Key-Pair 생성 - 했다 치자
+    ​
+  
+
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Express.js/" rel="permalink">Express.js
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Express.js 101
+
+  Express.js 는 Node.js의 웹 애플리케이션 프레임워크이다.
+  Express.js API Example
+
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/MongoDB-101/" rel="permalink">MongoDB 101
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">MongoDB 101
+
+  MongoDB 는 이전에 Humongous 였으며, 개명되었다. Humongous (휴멍거스) 뜻이 거대한 이라는 뜻이니, 이름으로 정체성을 드러내고 있다고 볼수 있다. NoSQL로 분류되며, 스키마를 가진 JSON과 같은 다큐먼트를 이용한다.
+  How...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/AppleScript/" rel="permalink">AppleScript
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">AppleScript
+
+  AppleScript 는 Mac 앱 혹은 기능을 마치  쉘 스크립트 처럼 자동화하여 사용하는 방법이다.
+
+  AppleScript는 최종으로 실행형 App으로 변환이 가능하다.
+  Examples
+  하루 정도 걸린것 같음. - 애플스크립트 매뉴얼 대충 ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Go-Lang-getting-started/" rel="permalink">Go Lang Getting started
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Go Lang Getting started
+
+  GoLang is an open source, compiled and statically typed programming language created by Google.
+
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/This-blog-template-maker/" rel="permalink">This blog template maker
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">This Blog Markdown Template Maker implemented by Node.js
+
+  Node.JS를 이용하여 이 블로그의 마크다운 템플릿을 만들어 봤습니다.
+
+  원리는 그냥 파일에다가 쓰는것이구요. 로컬에 Node.js를 통하여 템플릿을 만드는 것으로 하였...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Node.js-How-to/" rel="permalink">Node.js How-to-make….
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Node.JS 정리
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%84%9C%EB%B9%84%EC%8A%A4/" rel="permalink">마이크로서비스
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">```java
+// Java manner
+package bug.description ;
+import java.io.* ;
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8/" rel="permalink">블록체인 - 책 읽은 것 정리
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">블록체인
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/BIXPO-2017-%ED%96%89%EC%82%AC/" rel="permalink">BIXPO 행사 오라클 전시 내용
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">BIXPO 2017 행사###
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Oracle-Chatbot-Demo/" rel="permalink">Oracle Chatbot Demo
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Oracle Chatbot Demo
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/swift/Graph-Dijkstra-algorithm/" rel="permalink">최단 경로 그래프 - Dijkstra algorithm
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Dijkstra algorithm 그래프 데이터 구조와 구현
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/swift/Swift-Closure-Example/" rel="permalink">Swift Closure Example
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Swift Closure
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Bootstrap/" rel="permalink">Bootstrap - HTML5 + CSS + BootStrap + JQuery
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Bootstrap - Lynda.com 정리
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-Kotlin-%EC%B1%84%ED%83%9D/" rel="permalink">안드로이드 Kotlin 채택
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">안드로이드가 이제는 Kotlin 이라는 언어를 채택
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/%EC%96%B8%EC%96%B4-%EC%8A%B5%EB%93%9D-%EB%B0%A9%EB%B2%95/" rel="permalink">언어 습득 방법
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">언어습득 방법###
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/swift/make-custom-camera-in-xcode-9/" rel="permalink">Custom Camera
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Custom Camera 를 만들어 보자
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/IT-%EC%9A%A9%EC%96%B4-%EB%AA%A8%EC%9D%8C/" rel="permalink">IT 用語
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">IT Terms##
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/%EC%9A%A9%EC%96%B4%EB%AA%A8%EC%9D%8C/" rel="permalink">一般 用語
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">일반 용어 모음
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/%EC%82%BD%EC%A7%88%EC%9D%98-%EA%B8%B0%EB%A1%9D/" rel="permalink">삽질의 기록
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">삽질의 기록 - 집 인듯 아닌듯 미디어 서버 구축
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/YAML-%EB%AC%B8%EB%B2%95/" rel="permalink">YAML
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">YAML 문법
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Floatable-IP-Usage/" rel="permalink">유동 IP로 도메인 연결하기
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/%EB%A3%A8%EB%B9%84-%EC%98%A8-%EB%A0%88%EC%9D%BC%EC%A6%88-%EC%9D%B8%EC%8A%A4%ED%86%A8%EA%B3%BC-%EC%8B%9C%EC%9E%91/" rel="permalink">루비 온 레일즈 인스톨과 시작
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Ruby On Rails
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Jekyll-Usage/" rel="permalink">Jekyll 사용과 디렉토리 구조
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Jekyll 사용 과 디렉토리 구조###
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Jekyll-install-on-macOS-Sierra/" rel="permalink">Jekyll install on macOS Sierra
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Jekyll 을 macOS Sierra에 인스톨하기###
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/custom-domain-github-page/" rel="permalink">도메인 등록과 github page 연결
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">도메인 등록과 페이지 연결
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/How-to-make-a-static-web-site-quickly-using-GitHub-Pages/" rel="permalink">How to make a static web site quickly using GitHub Pages
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">How to make a static web site quickly Using GitHub Pages
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/Mark-Down-Test/" rel="permalink">마크다운 테스트
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">[TOC]
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/insert-image/" rel="permalink">이미지 넣는 방법
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">이미지는 이렇게 넣나요?
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iron/make-homepage/" rel="permalink">홈페이지를 만드는 방법
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">This is 테스트
+
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+
+  </div>
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 C.W. Kim. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  </body>
+</html>
