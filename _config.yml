@@ -285,6 +285,20 @@ defaults:
       type: post
     values:
       layout: single
+      #classes: wide
+      author_profile: true
+      #read_time: true
+      comments: true
+      share: true
+      related: true
+      toc: true 
+      toc_label: "MyTable of Contents"
+      toc_icon: "cog"
+  - scope:
+      path: ""
+      type: splash
+    values:
+      layout: single
       classes: wide
       author_profile: true
       read_time: true
@@ -293,8 +307,7 @@ defaults:
       related: true
       toc: true 
       toc_label: "MyTable of Contents"
-      toc_icon: "cog"
- 
+      toc_icon: "cog" 
 
 
 

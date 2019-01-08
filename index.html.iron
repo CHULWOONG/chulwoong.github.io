@@ -1,9 +1,8 @@
 ---
-layout: home
+layout: default
 author_profile: true
-#side bar - by iron
+#side bar - by iron 
 classes: wide
-comments: true 
 sidebar:
   - title: "Title"
     image: https://ironhub.github.io/assets/profile-placeholder.gif
@@ -11,7 +10,11 @@ sidebar:
     text: "Some text here."
   - title: "Another Title"
     text: "More text here."
-    nav: "docs"
-      
+    nav: "docs"  
+comments: true
+share: true
+related: true
+toc: true 
+toc_label: "MyTable of Contents"
+toc_icon: "cog"
 ---
-hello , world 
