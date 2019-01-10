@@ -19,7 +19,7 @@ locale                   : "ko-KR"
 title                    : "Iron's Home"
 title_separator          : "-"
 name                     : "C.W. Kim"
-description              : "minimal mistake jekyll theme"
+description              : "Iron Blog with minimal mistake jekyll theme"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -105,8 +105,8 @@ analytics:
 author: 
   name             : "C.W. Kim"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am a good person. before you know"
-  location         : "Seoul, Korea"
+  bio              : "당신이 저를 알기 전에는 저는 좋은 사람이었어요"
+  location         : "서울 대한민국"
   email            :
   links:
     - label: "Email"
